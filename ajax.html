@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="jquery.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("button").click(function(){    
+        	$.ajax({
+            	url: "load.html",
+            	success: function(response){
+    	            $("#div1").load('load.html #divcontent');
+            	},
+    		  error: function(response) {
+    		   alert('Not successful');
+    		  }
+        	});
+        });
+    });
+    </script>
+</head>
+<body>
+
+    <div id="div1"><h2>Test</h2></div>
+
+    <button>Get External Content</button>
+
+</body>
+</html>
